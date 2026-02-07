@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="theme-color" content="#1a0a0f">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>Happy Rose Day, Sanjida ❤️</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;600;700;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Music -->
+    <audio id="bgMusic" loop preload="auto">
+        <source src="Audio.mp3" type="audio/mpeg">
+    </audio>
+
+    <!-- Music Control Button -->
+    <button id="musicToggle" class="music-btn" aria-label="Toggle background music">
+        <svg class="music-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 18V5l12-2v13"></path>
+            <circle cx="6" cy="18" r="3"></circle>
+            <circle cx="18" cy="16" r="3"></circle>
+        </svg>
+        <svg class="mute-icon hidden" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+            <line x1="23" y1="9" x2="17" y2="15"></line>
+            <line x1="17" y1="9" x2="23" y2="15"></line>
+        </svg>
+    </button>
+
+    <!-- Progress Indicator -->
+    <div class="progress-indicator">
+        <div class="progress-dot" data-section="1"></div>
+        <div class="progress-dot" data-section="2"></div>
+        <div class="progress-dot" data-section="3"></div>
+        <div class="progress-dot" data-section="4"></div>
+        <div class="progress-dot" data-section="5"></div>
+        <div class="progress-dot" data-section="6"></div>
+    </div>
+
+    <!-- Animated Background -->
+    <div class="animated-background">
+        <div class="gradient-orb orb-1"></div>
+        <div class="gradient-orb orb-2"></div>
+        <div class="gradient-orb orb-3"></div>
+    </div>
+
+    <!-- Rose Petals Container -->
+    <div id="petalsContainer"></div>
+
+    <!-- Floating Hearts -->
+    <div id="heartsContainer"></div>
+
+    <!-- Main Container -->
+    <div id="mainContainer" class="main-container">
+        
+        <!-- Section 1: Entry Screen -->
+        <section id="section1" class="section active" data-section="1">
+            <div class="content-wrapper">
+                <div class="sparkle-container">
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                    <span class="sparkle"></span>
+                </div>
+                <h1 class="fade-in-text enchanted-text">
+                    For the most beautiful rose<br>in my life…
+                </h1>
+                <div class="animated-rose-icon">
+                    <div class="mini-rose">
+                        <div class="mini-petals">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="romantic-btn glow-btn" id="beginBtn">
+                    <span class="btn-text">Tap to begin, Sanjida</span>
+                    <span class="btn-icon">🌹</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 2: The Beginning -->
+        <section id="section2" class="section" data-section="2">
+            <div class="content-wrapper">
+                <div class="text-reveal-container">
+                    <div class="reveal-block">
+                        <p class="reveal-text" data-delay="500">
+                            <span class="highlight-text">It all started on July 30…</span>
+                        </p>
+                    </div>
+                    <div class="reveal-block">
+                        <p class="reveal-text" data-delay="2000">
+                            <span class="typewriter-text">A simple text…</span>
+                        </p>
+                    </div>
+                    <div class="reveal-block">
+                        <p class="reveal-text" data-delay="3500">
+                            <span class="typewriter-text">A conversation…</span>
+                        </p>
+                    </div>
+                    <div class="reveal-block">
+                        <p class="reveal-text" data-delay="5000">
+                            <span class="highlight-text">That turned into the most beautiful<br>part of my life.</span>
+                        </p>
+                    </div>
+                </div>
+                <button class="next-btn hidden" id="nextBtn2">
+                    <span>Continue</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 3: 2.5 Years Journey -->
+        <section id="section3" class="section" data-section="3">
+            <div class="content-wrapper">
+                <div class="journey-container">
+                    <div class="journey-badge">
+                        <div class="badge-ring"></div>
+                        <div class="badge-content">
+                            <span class="badge-number">2.5</span>
+                            <span class="badge-label">Years</span>
+                        </div>
+                    </div>
+                    <h2 class="glow-text enchanted-text">More than 2.5 years</h2>
+                    <p class="journey-subtitle">of laughter, care, talks, and love.</p>
+                    <div class="journey-path">
+                        <div class="path-line"></div>
+                        <div class="timeline-dots">
+                            <span class="dot pulse-dot" data-label="July 30"></span>
+                            <span class="dot pulse-dot" data-label="First Meet"></span>
+                            <span class="dot pulse-dot" data-label="Memories"></span>
+                            <span class="dot pulse-dot" data-label="Love"></span>
+                            <span class="dot pulse-dot active-dot" data-label="Forever"></span>
+                        </div>
+                    </div>
+                </div>
+                <button class="next-btn hidden" id="nextBtn3">
+                    <span>Continue</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 4: Rose Day Message -->
+        <section id="section4" class="section" data-section="4">
+            <div class="content-wrapper">
+                <div class="rose-showcase">
+                    <div class="rose-glow"></div>
+                    <div class="rose-container">
+                        <div class="rose-wrapper">
+                            <!-- Enhanced 3D Rose -->
+                            <div class="rose-3d">
+                                <!-- Outer petals -->
+                                <div class="petal-layer layer-1">
+                                    <div class="petal p1"></div>
+                                    <div class="petal p2"></div>
+                                    <div class="petal p3"></div>
+                                    <div class="petal p4"></div>
+                                    <div class="petal p5"></div>
+                                    <div class="petal p6"></div>
+                                </div>
+                                <!-- Middle petals -->
+                                <div class="petal-layer layer-2">
+                                    <div class="petal p1"></div>
+                                    <div class="petal p2"></div>
+                                    <div class="petal p3"></div>
+                                    <div class="petal p4"></div>
+                                    <div class="petal p5"></div>
+                                </div>
+                                <!-- Inner petals -->
+                                <div class="petal-layer layer-3">
+                                    <div class="petal p1"></div>
+                                    <div class="petal p2"></div>
+                                    <div class="petal p3"></div>
+                                    <div class="petal p4"></div>
+                                </div>
+                                <!-- Center -->
+                                <div class="rose-center"></div>
+                                <!-- Stem with shine -->
+                                <div class="rose-stem">
+                                    <div class="stem-shine"></div>
+                                </div>
+                                <!-- Leaves -->
+                                <div class="rose-leaf leaf-left">
+                                    <div class="leaf-vein"></div>
+                                </div>
+                                <div class="rose-leaf leaf-right">
+                                    <div class="leaf-vein"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="rose-message">
+                    <h2 class="main-message enchanted-text">Happy Rose Day, Sanjida.</h2>
+                    <div class="message-divider"></div>
+                    <p class="sub-message">You are not just a rose…</p>
+                    <p class="sub-message">You are my garden, my peace, my happiness.</p>
+                    <div class="heart-pulse">💖</div>
+                </div>
+                <button class="next-btn hidden" id="nextBtn4">
+                    <span>Continue</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 5: Emotional Message -->
+        <section id="section5" class="section" data-section="5">
+            <div class="content-wrapper">
+                <div class="emotional-container">
+                    <div class="quote-mark quote-start">"</div>
+                    <div class="emotional-card">
+                        <p class="emotional-text">
+                            Every moment with you feels like a blessing, even from miles away. Your smile still lights
+                            up my darkest days, your voice brings melody to my silence, and somehow your presence makes
+                            everything feel complete no matter the distance between us. These 2.5 years have been the
+                            most beautiful journey of my life. I'm grateful for every late-night conversation, every
+                            shared laugh across screens, and every moment we've held onto despite the space between us.
+                            You've turned ordinary days into extraordinary memories, and even though you live far from
+                            me, you're closer to my heart than anyone else. I truly can't imagine my life without you in
+                            it.
+                        </p>
+                    </div>
+                    <div class="quote-mark quote-end">"</div>
+                    <div class="heart-decoration">
+                        <span class="heart beating-heart">❤️</span>
+                    </div>
+                </div>
+                <button class="next-btn hidden" id="nextBtn5">
+                    <span>Continue</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 6: Final Question -->
+        <section id="section6" class="section" data-section="6">
+            <div class="content-wrapper">
+                <div class="question-container">
+                    <div class="question-sparkles">
+                        <span class="sparkle-dot"></span>
+                        <span class="sparkle-dot"></span>
+                        <span class="sparkle-dot"></span>
+                    </div>
+                    <h2 class="question-text enchanted-text">Sanjida…</h2>
+                    <div class="question-ring">
+                        <div class="ring-glow"></div>
+                        <h3 class="question-main">Will you be my forever rose?</h3>
+                    </div>
+                    <div class="button-container">
+                        <button class="answer-btn yes-btn" id="yesBtn">
+                            <span class="btn-shimmer"></span>
+                            <span class="btn-content">Yes 💖</span>
+                        </button>
+                        <button class="answer-btn always-btn" id="alwaysBtn">
+                            <span class="btn-shimmer"></span>
+                            <span class="btn-content">Always 🌹</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Final Message (Hidden) -->
+    <div id="finalMessage" class="final-message hidden">
+        <div class="final-background">
+            <div class="final-rays"></div>
+        </div>
+        <div class="final-content">
+            <div class="celebration-container">
+                <div class="burst-container" id="burstContainer"></div>
+                <div class="confetti-container" id="confettiContainer"></div>
+            </div>
+            <div class="final-rose-animation">
+                <div class="bouquet-rose"></div>
+                <div class="bouquet-rose"></div>
+                <div class="bouquet-rose"></div>
+            </div>
+            <h2 class="final-text enchanted-text">
+                You just made my<br>Rose Day perfect. ❤️
+            </h2>
+            <div class="final-hearts">
+                <span>💕</span><span>💖</span><span>💗</span>
+            </div>
+            <button class="restart-btn" id="restartBtn">
+                <span>Experience Again</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/>
+                    <path d="M21 3v5h-5"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
